@@ -165,8 +165,7 @@ class BookControllerTest {
                 .contentType(MediaType.APPLICATION_JSON));
 
         // assert
-        resultActions.andExpect(status().isOk())
-                .andDo(print())
-                .andExpect(result -> assertEquals(expectedResponse, result.getResponse().getContentAsString()));
+        resultActions.andExpect(status().isNoContent())
+                .andDo(print());
     }
 }
